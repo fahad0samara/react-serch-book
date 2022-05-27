@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Data from './Data'
+
 const sceion = () => {
     const [data, setData] = useState([]);
     const [search, setsearch] = useState('');
@@ -9,16 +9,17 @@ const sceion = () => {
 
 
 
+     
     }
     useEffect(() => {
-
-        axios.get('https://www.googleapis.com/books/v1/volumes?q='+search+'&key=AIzaSyCAvTHLk8ZQz7_W3FWXLiXIqwnyhjt_mfI').then(function (response) {
-            console.log(response.data);
+        axios.get(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=AIzaSyCAvTHLk8ZQz7_W3FWXLiXIqwnyhjt_mfI`).then(function (response) {
+            console.log(response.data.items);
+            setData(response.data.items);
         }).catch(function (error) {
             console.error(error);
         });
 
-    }, [])
+    }, [search]);
     return (
 
         <div>
@@ -60,17 +61,38 @@ const sceion = () => {
                     </div>
                 </div>
             </section>
-
-            {
+            {data &&
                 data.map((item, index) => {
                     return (
                         <div>
-                            {item.title}
+                           <a href= {item.volumeInfo.infoLink}>info</a>
+                            {item.volumeInfo.title}
+                           <img  alt="" />
+                           <div>
+
+                           {item.volumeInfo.publishedDate}
+                           </div>
+
+
+                           <div className="max-w-xs mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+        <div className="px-4 py-2">
+            <h1 className="text-3xl font-bold text-gray-800 uppercase dark:text-white">NIKE AIR</h1>
+            <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus</p>
+        </div>
+
+        <img className="object-cover w-full h-48 mt-2"src= {item.volumeInfo.imageLinks.thumbnail} alt="NIKE AIR"/>
+
+        <div className="flex items-center justify-between px-4 py-2 bg-gray-900">
+            <h1 className="text-lg font-bold text-white">$129</h1>
+            <button className="px-2 py-1 text-xs font-semibold text-gray-900 uppercase transition-colors duration-200 transform bg-white rounded hover:bg-gray-200 focus:bg-gray-400 focus:outline-none">Add to cart</button>
+        </div>
+    </div>
                         </div>
                     )
 
                 })
             }
+           
         </div>
     )
 }
