@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 .grn {
-    background: linear-gradient(315deg, rgba(7, 9, 7, 1) 42%, rgba(42, 187, 12, 1) 43%);
+    background: linear-gradient(-5deg, rgba(7, 9, 7, 1) 40%, rgb(127, 234, 249) 80%);
 }
 
-.btn {
-    background: linear-gradient(300deg, rgba(42, 187, 12, 1) 42%, rgba(7, 9, 7, 1) 43%);
+.naav {
+    background: linear-gradient(30deg, rgba(7, 9, 7, 1) 10%, rgb(127, 234, 249) 90%);
 }

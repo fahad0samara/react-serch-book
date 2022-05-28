@@ -17,7 +17,7 @@ const Toggle = () => {
   };
   return (
     <div className=" flex  justify-center" onClick={handleClick}>
-      {darkMode ? <BsFillMoonFill  color=" red" size={30} /> : <BsFillSunFill  color=" " size={30}  />}
+      {darkMode ? <BsFillMoonFill   size={30} /> : <BsFillSunFill  color=" " size={30}  />}
 
      
     </div>
