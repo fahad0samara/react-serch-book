@@ -27,16 +27,17 @@ const sceion = () => {
     }, 2000);
   }, [search]);
   return (
-    <div>
-      <section className="relative grn   overflow-hidden" data-path="0">
-      <img  className="absolute top-0 right-0 h-40 lg:h-80 lg:mr-64 lg:mt-24" src={img} alt="" />
+    <div className=''>
+      <section className="relative  grn text-white  overflow-hidden" >
+      <img  className="absolute hidden md:block -right-16 -top-3 h-56 lg:h-96 lg:mr-64 lg:mt-24" src={img} alt="" />
         <img
-          className="absolute top-0 right-0 h-40 lg:h-80 lg:mr-64 lg:mt-24"
+          className="absolute top-0 -right-12 h-40 lg:h-80 lg:mr-64 lg:mt-24"
           src="https://shuffle.dev/zospace-assets/images/five-stars.svg"
           alt=""
           data-config-id="auto-img-2"
           data-path="0.1"
         />
+       
         
 
         <div className="relative container px-4 mx-auto" data-path="0.4">
@@ -45,14 +46,14 @@ const sceion = () => {
             <div className="max-w-xl" data-path="0.4.0.0">
            
               <h2
-                className="mt-12 mb-14 text-5xl font-bold font-heading text-white"
+                className="mt-12 mb-14 text-5xl font-bold font-heading "
                 data-config-id="header"
                 data-path="0.4.0.0.1"
               >
                 Do you have a specific book then do a search now...
               </h2>
               <p
-                className="mb-20 text-xl text-gray-200"
+                className="mb-20 text-xl text-black font-black "
                 data-config-id="desc"
                 data-path="0.4.0.0.2"
               >
@@ -79,18 +80,18 @@ const sceion = () => {
                       value={search}
                       onClick={onkeyPress}
                       onChange={e => setsearch(e.target.value)}
-                      className=" sm:w-auto mb-4 sm:mb-0 pl-8 sm:pl-4 py-5 sm:px-10  placeholder-gray-900 font-bold focus:outline-none"
+                      className=" sm:w-auto mb-4 sm:mb-0 pl-8 sm:pl-4 py-5 sm:px-10  placeholder-cyan-500 text-black font-bold focus:outline-none"
                       type="Search"
                       placeholder="Search for a book"
                     />
-                    <button className="mb-4 sm:rounded-full  sm:mb-0   sm:ml-auto px-5 sm:px-10 py-5  bg-[#2abb0c]  text-white font-bold hover:bg-blue-600 transition duration-200">
+                    <button className="mb-4 sm:rounded-full  sm:mb-0   sm:ml-auto px-5 sm:px-10 py-5 font-black   bg-cyan-300 text-black font-bold hover:bg-blue-600 transition duration-200">
                       Search
                     </button>
                   </div>
                 </div>
               </div>
               <img
-                className="absolute top-0 left-0 h-40 lg:h-80 lg:mr-64 lg:mt-24"
+                className="absolute top-0 hidden md:block left-0 h-40 lg:h-80 lg:mr-64 lg:mt-24"
                 src={img1}
                 alt=""
                 data-config-id="auto-img-2"
@@ -113,7 +114,7 @@ const sceion = () => {
         {loading ? (
           <div className="text-center"> loding...</div>
         ) : (
-          <div className=" grid  grid-cols-5    gap-8">
+          <div className=" grid xl:grid-cols-3  grid-cols-2 lg:grid-cols-5    gap-8">
             {data &&
               data
                 .filter(item =>
@@ -130,7 +131,7 @@ const sceion = () => {
                             {item.volumeInfo.title}
                           </h1>
                         </div>
-
+                        
                         <img
                           className="object-contain h-48 mt-2"
                           src={item.volumeInfo.imageLinks.thumbnail}
@@ -151,7 +152,15 @@ const sceion = () => {
                   );
                 })}
           </div>
+          
         )}
+        <img
+                className="absolute top-0 left-0 h-40 lg:h-80 lg:mr-64 lg:mt-24"
+                src="https://shuffle.dev/zospace-assets/images/five-stars.svg"
+                alt=""
+                data-config-id="auto-img-2"
+                data-path="0.1"
+              />
       </div>
     </div>
   );
