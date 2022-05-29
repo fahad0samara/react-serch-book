@@ -13,6 +13,7 @@
     "react-dom": "^18.0.0",
     "react-icons": "^4.3.1",
     "react-router-dom": "^6.3.0",
+    "swiper": "^8.1.6",
     "vite-tsconfig-paths": "^3.4.1"
   },
   "devDependencies": {
