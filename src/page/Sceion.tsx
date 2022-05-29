@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import img from '../img/0.png'
-import img1 from '../img/1.png'
+import img from '../img/2.png'
+
 const sceion = () => {
   const [data, setData] = useState([]);
   const [search, setsearch] = useState("");
@@ -16,7 +16,7 @@ const sceion = () => {
           `https://www.googleapis.com/books/v1/volumes?q=${search}&key=AIzaSyCAvTHLk8ZQz7_W3FWXLiXIqwnyhjt_mfI`
         )
         .then(function (response) {
-          console.log(response.data.items);
+      
           setLoading(false);
           setData(response.data.items);
         })
@@ -24,14 +24,23 @@ const sceion = () => {
           console.error(error);
         });
       setLoading(true);
-    }, 2000);
+    }, 100);
   }, [search]);
   return (
     <div className=''>
       <section className="relative  grn text-white  overflow-hidden" >
-      <img  className="absolute hidden md:block -right-16 -top-3 h-56 lg:h-96 lg:mr-64 lg:mt-24" src={img} alt="" />
+      <img  className="absolute hidden md:block -right-16 top-3 h-56 lg:h-auto
+      
+      lg:mr-16 -mt-40" src={img} alt="" />
         <img
           className="absolute top-0 -right-12 h-40 lg:h-80 lg:mr-64 lg:mt-24"
+          src="https://shuffle.dev/zospace-assets/images/five-stars.svg"
+          alt=""
+          data-config-id="auto-img-2"
+          data-path="0.1"
+        />
+         <img
+          className="absolute top-0 right-12 h-40 lg:h-80 lg:mr-64 lg:mt-24"
           src="https://shuffle.dev/zospace-assets/images/five-stars.svg"
           alt=""
           data-config-id="auto-img-2"
@@ -90,13 +99,7 @@ const sceion = () => {
                   </div>
                 </div>
               </div>
-              <img
-                className="absolute top-0 hidden md:block left-0 h-40 lg:h-80 lg:mr-64 lg:mt-24"
-                src={img1}
-                alt=""
-                data-config-id="auto-img-2"
-                data-path="0.1"
-              />
+            
               <img
                 className="absolute top-0 left-0 h-40 lg:h-80 lg:mr-64 lg:mt-24"
                 src="https://shuffle.dev/zospace-assets/images/five-stars.svg"
@@ -111,9 +114,7 @@ const sceion = () => {
         </div>
       </section>
       <div>
-        {loading ? (
-          <div className="text-center"> loding...</div>
-        ) : (
+       
           <div className=" grid xl:grid-cols-3  grid-cols-2 lg:grid-cols-5    gap-8">
             {data &&
               data
@@ -153,7 +154,7 @@ const sceion = () => {
                 })}
           </div>
           
-        )}
+        
         <img
                 className="absolute top-0 left-0 h-40 lg:h-80 lg:mr-64 lg:mt-24"
                 src="https://shuffle.dev/zospace-assets/images/five-stars.svg"

@@ -4,6 +4,7 @@ import { themeContext } from './Context'
 import Navbar from './Navbar';
 import Sceion from "./page/Sceion";
 import Home from './page/Home'
+import Footer from './page/Footer';
 function App() {
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
@@ -22,6 +23,7 @@ function App() {
       <Navbar/>
       <Sceion/>
       <Home/>
+      <Footer/>
  
     </div>
   )

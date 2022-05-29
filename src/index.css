@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 .grn {
-    background: linear-gradient(-90deg, rgba(7, 9, 7, 1) 50%, rgb(127, 234, 249) 80%);
+    background: linear-gradient(-90deg, rgba(7, 9, 7, 1) 50%, rgb(179 252 241) 80%);
 }
 
 .naav {
