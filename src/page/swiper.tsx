@@ -9,7 +9,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 // import required modules
-import { EffectCoverflow, Pagination ,Autoplay,Navigation  } from "swiper";
+import { EffectCoverflow, Pagination ,Autoplay  } from "swiper";
 import FatchData from "./FatchData";
 
 
@@ -35,8 +35,12 @@ export default function App() {
   return (
     <div className={" "}>
       <div>
-        <h1 className=" text-center text-3xl">Top selling</h1>
-        <h1 className=" text-center text-6xl mb-12">Explore Top destination</h1>
+        <h1
+        data-aos="fade-left"
+        className=" text-center text-3xl">Top selling</h1>
+        <h1
+         data-aos="fade-right"
+        className=" text-center text-6xl mb-12">Explore Top destination</h1>
       </div>
       <Swiper
        autoplay={{

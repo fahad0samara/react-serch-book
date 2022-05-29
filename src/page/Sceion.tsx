@@ -29,10 +29,13 @@ const sceion = () => {
   return (
     <div className=''>
       <section className="relative  grn text-white  overflow-hidden" >
-      <img  className="absolute hidden md:block -right-16 top-3 h-56 lg:h-auto
+      <img
+      data-aos="fade-up"
+      className="absolute hidden md:block -right-16 top-3 h-56 lg:h-auto
       
       lg:mr-16 -mt-40" src={img} alt="" />
         <img
+      data-aos="fade-down"
           className="absolute top-0 -right-12 h-40 lg:h-80 lg:mr-64 lg:mt-24"
           src="https://shuffle.dev/zospace-assets/images/five-stars.svg"
           alt=""
@@ -55,6 +58,7 @@ const sceion = () => {
             <div className="max-w-xl" data-path="0.4.0.0">
            
               <h2
+              data-aos="fade-down"
                 className="mt-12 mb-14 text-5xl font-bold font-heading "
                 data-config-id="header"
                 data-path="0.4.0.0.1"
@@ -156,6 +160,7 @@ const sceion = () => {
           
         
         <img
+        data-aos="fade-down"
                 className="absolute top-0 left-0 h-40 lg:h-80 lg:mr-64 lg:mt-24"
                 src="https://shuffle.dev/zospace-assets/images/five-stars.svg"
                 alt=""

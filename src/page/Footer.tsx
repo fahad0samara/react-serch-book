@@ -5,8 +5,12 @@ const Footer = () => {
   return (
       <div>
 <div>
-                <h2 className="text-2xl leading-6 text-center px-4">Testimonials</h2>
-                <h1 className="lg:text-5xl md:text-4xl text-2xl font-semibold px-4 leading-10  mt-6 text-center">What our client says</h1>
+                <h2
+                 data-aos="fade-right"
+                className="text-2xl leading-6 text-center px-4">Testimonials</h2>
+                <h1
+                data-aos="fade-left"
+                className="lg:text-5xl md:text-4xl text-2xl font-semibold px-4 leading-10  mt-6 text-center">What our client says</h1>
                 <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:px-20 px-10 py-20 gap-6">
                     <div>
                         <div className="group text-black w-full bg-white relative flex flex-col items-center hover:bg-[#e8a6c6] cursor-pointer shadow-md md:p-12 p-6">
@@ -60,7 +64,9 @@ const Footer = () => {
                         </div>
                     </div>
                     <div>
-                        <div className="group text-black w-full bg-[#b3fcf1]  relative flex flex-col items-center hover:text-black hover:bg-white cursor-pointer shadow-md md:p-12 p-6">
+                        <div
+                        data-aos="fade-down"
+                        className="group text-black w-full bg-[#b3fcf1]  relative flex flex-col items-center hover:text-black hover:bg-white cursor-pointer shadow-md md:p-12 p-6">
                             <div className=" group-hover:text-black flex flex-col items-center">
                                 <svg width={26} height={27} viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clipPath="url(#clip0)">
@@ -165,7 +171,9 @@ const Footer = () => {
                             </div>
                         </div>
 
-                        <div className="flex flex-col items-center justify-center mt-10">
+                        <div
+                         data-aos="fade-right"
+                        className="flex flex-col items-center justify-center mt-10">
                             <img src="https://cdn.tuk.dev/assets/components/26May-update/avatar-3.png" alt="profile pictre" className="w-12 h-12" />
                             <p className="text-base font-semibold leading-4 my-2 ">Kera </p>
                             <p className="text-base leading-4 text-center ">Joo</p>
@@ -199,7 +207,9 @@ const Footer = () => {
                                       <input type="email" id="email" placeholder="johnstark97@gmail.com" className="focus:outline-none focus:border-indigo-700 border-gray-300 border rounded-sm py-2 outline-none pl-2 pr-2" />
                                   </div>
                                 
-                                  <button type="submit" className= {'focus:outline-none hover:bg-indigo-600  text-base w-full py-3 px-6 rounded bg-[#b3fcf1]  text-black '}>
+                                  <button
+                                   data-aos="fade-right"
+                                  type="submit" className= {'focus:outline-none hover:bg-indigo-600  text-base w-full py-3 px-6 rounded bg-[#b3fcf1]  text-black '}>
                                   Sign Up
                                   </button>
                               </div>
@@ -322,15 +332,14 @@ const Footer = () => {
              >
                
                <span className="ml-2 text-xl font-bold tracking-wide text-blue-400 uppercase">
-                 i
+               s-BOoks
                </span>
              </a>
              <div 
              data-aos="fade-down"
              className="mt-4 lg:max-w-sm">
                <p className="text-sm text-deep-purple-50">
-               Provide deluxe hydration for those with dry or age-related skin concerns.
-
+               Best place to find books
                </p>
                <p  className="mt-4 text-sm text-deep-purple-50">
                They add intense moisture to dehydrated or mature skin, alleviating uneven, sun-damaged textures to promote natural radiance

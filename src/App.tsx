@@ -7,6 +7,10 @@ import Home from './page/Home'
 import Sceion1 from './page/Sceion1'
 import Footer from './page/Footer';
 import Swiper from './page/swiper'
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 function App() {
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
